@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <input
+        type="radio"
+        name="tema"
+        id="tema-normal"
+        class="selector-tema"
+        checked
+    >
+    <input
+        type="radio"
+        name="tema"
+        id="tema-contraste"
+        class="selector-tema"
+    >
+    <div class="pagina">
+        <main>
+            <h1>Datos personales</h1>
+            <p class="descripcion">Complete el siguiente formulario con sus datos personales.</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    minlength="2"
+                    maxlength="30"
+                    placeholder="Ingrese su nombre"
+                >
+                <label for="apellido">Apellido:</label>
+                <input
+                    type="text"
+                    id="apellido"
+                    name="apellido"
+                    required
+                    minlength="2"
+                    maxlength="30"
+                    placeholder="Ingrese su apellido"
+                >
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="ejemplo@correo.com"
+                >
+                <label for="fecha">Fecha de nacimiento:</label>
+                <input
+                    type="date"
+                    id="fecha"
+                    name="fecha"
+                    required
+                    min="1900-01-01"
+                    max="2026-09-08"
+                >
+                <label for="pais">País de residencia:</label>
+                <select
+                    id="pais"
+                    name="pais"
+                    required
+                >
+                    <option value="">Seleccione un país</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="uruguay">Uruguay</option>
+                    <option value="chile">Chile</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="paraguay">Paraguay</option>
+                </select>
+                <div class="botones">
+                    <button type="submit">Enviar</button>
+                    <label
+                        for="tema-normal"
+                        class="boton-estilo"
+                    >Estilo normal</label>
+                    <label
+                        for="tema-contraste"
+                        class="boton-estilo"
+                    >Alto contraste</label>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
